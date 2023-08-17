@@ -16,12 +16,12 @@
             int returnInteger = random.Next(minValue, maxValue);
             for (int d = 0; d < factors.Length; d++)
             {
-                for (int nd = 0; nd < notFactors.Length; nd++)
+                for (int nf = 0; nf < notFactors.Length; nf++)
                 {
                     while (!areEligibleFactors[d])
                     {
                         bool isFactor = returnInteger % factors[d] == 0;
-                        bool isNotFactor = (notFactors[nd] == 0) || returnInteger % notFactors[nd] != 0;
+                        bool isNotFactor = (notFactors[nf] == 0) || returnInteger % notFactors[nf] != 0;
                         
                         if (isFactor && isNotFactor)
                         {
