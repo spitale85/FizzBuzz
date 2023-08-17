@@ -2,30 +2,30 @@
 {
     internal class RandomIntegerGenerator
     {
-        internal static int GenerateIntegerDivisibleBy(int[] dividers, int minValue, int maxValue, int[]? notDividers = null)
+        internal static int GenerateIntegerDivisibleBy(int[] factors, int minValue, int maxValue, int[]? notFactors = null)
         {
-            notDividers ??= new int[] { 0 };
+            notFactors ??= new int[] { 0 };
 
             // used Shared Properties for thread-safety. Tests execution where stuck with new Random()
             //var random = Random.Shared;
             var random = new Random();
 
         startLoopToFindTheMatchingInteger:
-            bool[] areEligibleDividers = new bool[dividers.Length];
+            bool[] areEligibleFactors = new bool[factors.Length];
 
             int returnInteger = random.Next(minValue, maxValue);
-            for (int d = 0; d < dividers.Length; d++)
+            for (int d = 0; d < factors.Length; d++)
             {
-                for (int nd = 0; nd < notDividers.Length; nd++)
+                for (int nd = 0; nd < notFactors.Length; nd++)
                 {
-                    while (!areEligibleDividers[d])
+                    while (!areEligibleFactors[d])
                     {
-                        bool isDividible = returnInteger % dividers[d] == 0;
-                        bool isNotDividible = (notDividers[nd] == 0) || returnInteger % notDividers[nd] != 0;
+                        bool isFactor = returnInteger % factors[d] == 0;
+                        bool isNotFactor = (notFactors[nd] == 0) || returnInteger % notFactors[nd] != 0;
                         
-                        if (isDividible && isNotDividible)
+                        if (isFactor && isNotFactor)
                         {
-                            areEligibleDividers[d] = true;
+                            areEligibleFactors[d] = true;
                         }
                         else goto startLoopToFindTheMatchingInteger;
                     }
