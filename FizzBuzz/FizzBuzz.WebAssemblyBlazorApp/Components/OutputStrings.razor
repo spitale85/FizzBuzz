@@ -1,0 +1,18 @@
+﻿@foreach (var output in Strings)
+{
+    <p>@output</p>
+}
+
+@code{
+    private readonly int[] _fizzBuzzIntegers = Enumerable.Range(1, 100).ToArray();
+
+    public readonly List<string> Strings = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        foreach (var integer in _fizzBuzzIntegers)
+        {
+            Strings.Add(FizzBuzzProcessor.ProcessInteger(integer));
+        }
+    }
+}
