@@ -3,12 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz.Shared", "FizzBuzz\FizzBuzz.Shared.csproj", "{2EACD05D-9717-4463-9D54-4E5CD06AB4B2}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz.Shared.Tests", "FizzBuzz.Tests\FizzBuzz.Shared.Tests.csproj", "{C14BD03A-DCCC-4E1B-954E-BD3BF7A71FD4}"
-	ProjectSection(ProjectDependencies) = postProject
-		{2EACD05D-9717-4463-9D54-4E5CD06AB4B2} = {2EACD05D-9717-4463-9D54-4E5CD06AB4B2}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz.ConsoleApp", "FizzBuzz.ConsoleApp\FizzBuzz.ConsoleApp.csproj", "{9F1CA553-8C1F-4AD1-AB0A-04BB1A1029F7}"
 EndProject
@@ -16,16 +11,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz.WebAssemblyBlazorA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz.WebAssemblyBazorApp.Tests", "FizzBuzz.WebAssemblyBazorApp.Tests\FizzBuzz.WebAssemblyBazorApp.Tests.csproj", "{B6AFE7D7-9837-4099-934E-75676B0FBA46}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz.Shared", "FizzBuzz.Shared\FizzBuzz.Shared.csproj", "{BEFE7857-CD6C-4797-A45E-E8F8FBC7F3D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2EACD05D-9717-4463-9D54-4E5CD06AB4B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2EACD05D-9717-4463-9D54-4E5CD06AB4B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2EACD05D-9717-4463-9D54-4E5CD06AB4B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2EACD05D-9717-4463-9D54-4E5CD06AB4B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C14BD03A-DCCC-4E1B-954E-BD3BF7A71FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C14BD03A-DCCC-4E1B-954E-BD3BF7A71FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C14BD03A-DCCC-4E1B-954E-BD3BF7A71FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,6 +35,10 @@ Global
 		{B6AFE7D7-9837-4099-934E-75676B0FBA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6AFE7D7-9837-4099-934E-75676B0FBA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6AFE7D7-9837-4099-934E-75676B0FBA46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFE7857-CD6C-4797-A45E-E8F8FBC7F3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFE7857-CD6C-4797-A45E-E8F8FBC7F3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFE7857-CD6C-4797-A45E-E8F8FBC7F3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFE7857-CD6C-4797-A45E-E8F8FBC7F3D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
