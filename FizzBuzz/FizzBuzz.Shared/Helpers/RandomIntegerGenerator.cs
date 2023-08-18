@@ -15,18 +15,18 @@ namespace FizzBuzz.Shared.Helpers
             bool[] areEligibleFactors = new bool[factors.Length];
 
             int returnInteger = random.Next(minValue, maxValue);
-            for (int d = 0; d < factors.Length; d++)
+            for (int f = 0; f < factors.Length; f++)
             {
                 for (int nf = 0; nf < nonFactors.Length; nf++)
                 {
-                    while (!areEligibleFactors[d])
+                    while (!areEligibleFactors[f])
                     {
-                        bool isFactor = returnInteger % factors[d] == 0;
+                        bool isFactor = returnInteger % factors[f] == 0;
                         bool isNotFactor = (nonFactors[nf] == 0) || returnInteger % nonFactors[nf] != 0;
 
                         if (isFactor && isNotFactor)
                         {
-                            areEligibleFactors[d] = true;
+                            areEligibleFactors[f] = true;
                         }
                         else goto startLoopToFindTheMatchingInteger;
                     }
