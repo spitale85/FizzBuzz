@@ -2,7 +2,6 @@
 
 namespace FizzBuzz.Shared.Tests.Model
 {
-    [Collection(nameof(SystemTestCollectionDefinition))]
     public class FizzBuzzTestsWithInlineData
     {
         [InlineData(3, "Fizz")]

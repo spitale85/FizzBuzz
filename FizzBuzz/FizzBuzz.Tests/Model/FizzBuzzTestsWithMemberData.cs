@@ -1,9 +1,7 @@
 ﻿using FizzBuzz.Shared.Model;
-using FizzBuzz.Shared.Tests.Helpers;
 
 namespace FizzBuzz.Shared.Tests.Model
 {
-    [Collection(nameof(SystemTestCollectionDefinition))]
     public class FizzBuzzTestsWithMemberData
     {
         [Theory]
@@ -22,11 +20,15 @@ namespace FizzBuzz.Shared.Tests.Model
 
         public static List<object[]> Data()
         {
+            int a = 3;
+            int b = 5;
+            int c = 15;
+
             return new List<object[]>
             {
-                new object[] { RandomIntegerGenerator.GenerateIntegerDivisibleBy(new int[] { 3 }, 1, 100, new int[] { 5 }), "Fizz" },
-                new object[] { RandomIntegerGenerator.GenerateIntegerDivisibleBy(new int[] { 5 }, 1, 100, new int[] { 3 }), "Buzz" },
-                new object[] { RandomIntegerGenerator.GenerateIntegerDivisibleBy(new int[] { 3, 5 }, 1, 100), "FizzBuzz" }
+                new object[] { a, "Fizz" },
+                new object[] { b, "Buzz" },
+                new object[] { c, "FizzBuzz" }
             };
         }
     }

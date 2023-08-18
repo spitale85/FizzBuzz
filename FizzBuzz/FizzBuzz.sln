@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz.ConsoleApp", "Fizz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz.WebAssemblyBlazorApp", "FizzBuzz.WebAssemblyBlazorApp\FizzBuzz.WebAssemblyBlazorApp.csproj", "{990A582D-61D6-4F09-B481-45D411E75E15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz.WebAssemblyBazorApp.Tests", "FizzBuzz.WebAssemblyBazorApp.Tests\FizzBuzz.WebAssemblyBazorApp.Tests.csproj", "{B6AFE7D7-9837-4099-934E-75676B0FBA46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz.WebAssemblyBazorApp.Tests", "FizzBuzz.WebAssemblyBazorApp.Tests\FizzBuzz.WebAssemblyBazorApp.Tests.csproj", "{B6AFE7D7-9837-4099-934E-75676B0FBA46}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz.Shared", "FizzBuzz.Shared\FizzBuzz.Shared.csproj", "{BEFE7857-CD6C-4797-A45E-E8F8FBC7F3D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz.Shared.PerformanceTests", "FizzBuzz.Shared.PerformanceTests\FizzBuzz.Shared.PerformanceTests.csproj", "{FED129EF-7310-48D2-91D9-C9E090C3A9C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BEFE7857-CD6C-4797-A45E-E8F8FBC7F3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEFE7857-CD6C-4797-A45E-E8F8FBC7F3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEFE7857-CD6C-4797-A45E-E8F8FBC7F3D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FED129EF-7310-48D2-91D9-C9E090C3A9C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED129EF-7310-48D2-91D9-C9E090C3A9C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED129EF-7310-48D2-91D9-C9E090C3A9C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED129EF-7310-48D2-91D9-C9E090C3A9C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

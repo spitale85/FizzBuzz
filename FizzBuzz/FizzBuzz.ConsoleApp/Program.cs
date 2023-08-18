@@ -9,9 +9,9 @@ Console.WriteLine();
 int[] fizzBuzzIntegers = Enumerable.Range(1, 100).ToArray();
 
 foreach (var integer in fizzBuzzIntegers)
-    {
+{
     Console.WriteLine(FizzBuzzProcessor.ProcessInteger(integer));
-    }
+}
 
 Console.WriteLine();
 Console.WriteLine("Done!");
