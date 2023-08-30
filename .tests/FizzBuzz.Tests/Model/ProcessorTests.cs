@@ -4,56 +4,56 @@ namespace FizzBuzz.Shared.Tests.Model
 {
     public class ProcessorTests
     {
-        [Fact]
-        public void ReturnsFizzGivenAnIntegerDivisibleOnlyByThree()
+        [InlineData(3)]
+        [InlineData(6)]
+        [InlineData(9)]
+        [Theory]
+        public void ReturnsFizzGivenAMultipleOfThree(int number)
         {
-            // Arrange
-            int input = 3;
-            
             // Act
-            string output = Processor.ProcessInteger(input);
+            string output = Processor.ProcessInteger(number);
 
             // Assert
             Assert.Equal("Fizz", output);
         }
 
-        [Fact]
-        public void ReturnsBuzzGivenAnIntegerDivisibleOnlyByFive()
+        [InlineData(5)]
+        [InlineData(10)]
+        [InlineData(5)]
+        [Theory]
+        public void ReturnsFizzGivenAMultipleOfFive(int number)
         {
-            // Arrange
-            int input = 5;
-            
             // Act
-            string output = Processor.ProcessInteger(input);
+            string output = Processor.ProcessInteger(number);
 
             // Assert
             Assert.Equal("Buzz", output);
         }
 
-        [Fact]
-        public void ReturnsFizzBuzzGivenAnIntegerDivisibleByThreeAndByFive()
+        [InlineData(15)]
+        [InlineData(30)]
+        [InlineData(60)]
+        [Theory]
+        public void ReturnsFizzGivenAMultipleOfThreeAndFive(int number)
         {
-            // Arrange
-            int input = 15;
-            
             // Act
-            string output = Processor.ProcessInteger(input);
+            string output = Processor.ProcessInteger(number);
 
             // Assert
             Assert.Equal("FizzBuzz", output);
         }
 
-        [Fact]
-        public void ReturnsTheSameNumberGivenAnIntegerNotDivisibleByThreeAndByFive()
+        [InlineData(1)]
+        [InlineData(7)]
+        [InlineData(8)]
+        [Theory]
+        public void ReturnsNumberGivenANonMultipleOfThreeOrFive(int number)
         {
-            // Arrange
-            int input = 7;
-
             // Act
-            string output = Processor.ProcessInteger(input);
+            string output = Processor.ProcessInteger(number);
 
             // Assert
-            Assert.Equal("7", output);
+            Assert.Equal(number.ToString(), output);
         }
     }
 }
